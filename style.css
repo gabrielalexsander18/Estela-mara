@@ -95,7 +95,7 @@ h1 {
     justify-content: space-between;
 }
 
-@media screen and (min-width: 1455px) {
+@media screen and (min-width: 1455px) {  /* monitor acima de 24" Polegadas */
     .foto-perfil {
         width: 400px;
         margin-bottom: 25px;
@@ -137,43 +137,49 @@ h1 {
     }
 }
 
-/* @media screen and (max-width: 720px) {
+@media screen and (max-width: 720px) {  /* iphone 12 Pro */
+    main {
+        Background-size: 120vh;
+        background-repeat: no-repeat;
+        background-image: url(./assets/background-aviao-cortada.jpg);
+        min-height: 100%;
+    }
+
+    .container-background {
+        min-height: 100vh;
+    }
+    
     .foto-perfil {
+        border-radius: 500px;
         width: 200px;
-        margin-bottom: 20px;
+        margin-top: 50px;
+        margin-bottom: 15px;
     }
-
+    
     .container-specification {
-        width: 350px;
+        width: 370px;
+        margin-bottom: 25px;
     }
-
+    
     h1 {
-        font-size: 40px;
+        font-size: 27px;
     }
-
+    
     .paragrafo-cargos {
-        font-size: 20px;
+        font-size: 17px;
+        margin-bottom: 10px;
     }
-
+    
     .paragrafo-endereço {
+        font-size: 15px;
     }
-
+    
     .container-contacts{
-        width: 400px;
-        margin: 0 auto 20px;
-        padding: 5px 15px;
+        width: 340px;
+        margin-bottom: 15px;
     }
-
-    .img-contacts {
-        width: 50px;
-    }
-
-    .paragrafo-phoneEmail {
-        height: 20px;
-        margin-bottom: 5px;
-    }
-
+    
     .palavra-emBold {
-        font-size: 19px;
+        font-size: 18px;
     }
-} */
+}
