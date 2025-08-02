@@ -7,67 +7,106 @@
 }
 
 main {
-    background-image: url(https://embraer.bynder.com/m/6744e44a54a6549a/original/Lineage1000E_Exterior-Flight-Mountains.jpg);
-    Background-size: cover;
-    min-height: 150vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(https://embraer.bynder.com/m/6744e44a54a6549a/original/Lineage1000E_Exterior-Flight-Mountains.jpg);
+    background-size: cover;
+    /* min-height: 100vh; */
+    /* overflow: hidden; */
 }
 
 .container-background {
-    background-color: rgb(119,136,153,0.5);
-    min-height: 150vh;
+    background-color: rgb(119, 136, 153, 0.3);
+    min-height: 100vh;
+    display: flex;
+    padding: 0 1rem;
+}
+
+#container-left {
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .container-foto-perfil {
     width: 100%;
     display: flex;
+    /* background-color: #fff; */
     justify-content: center;
+
+    padding: 4rem;
 }
 
 .foto-perfil {
-    border-radius: 500px;
-    width: 300px;
-    margin-top: 65px;
-    margin-bottom: 20px;
+    border-radius: 100px;
+    /* width: 400px; */
+    width: 25rem;
+    /* margin-top: 65px;
+    margin-bottom: 20px; */
 }
 
 .container-specification {
-    background-color: rgb(176,196,222,0.2);
-    width: 700px;
+    background: linear-gradient(90deg, rgba(10, 26, 92, .5)
+    /*#0a1a5c*/, 43.5644%, rgba(31, 39, 79, .5) 
+    /*#1f274f*/ 87.1287%, 93.5644%, rgba(40, 47, 85, .5)
+    /*#282f55*/);
+    width: 45rem;
     display: flex;
     flex-flow: row wrap;
     text-align: center;
     border-radius: 10px;
-    margin: 0 auto 50px;
-    padding-top: 5px;
-    padding-bottom: 10px;
+    margin: 0 auto;
+    /* padding-top: 5px;
+    padding-bottom: 10px; */
+    padding: 5px 5px 10px;
 }
 
 h1 {
     font-weight: 300;
-    font-size: 40px;
+    font-size: 45px;
+    color: #fff;
 }
 
 .paragrafo-cargos {
     font-weight: 300;
-    font-size: 20px;
+    font-size: 25px;
     margin-bottom: 15px;
+    color: #fff;
 }
 
 .paragrafo-endereço {
     font-weight: 100;
+    color: #fff;
 }
 
-.container-contacts{
-    background-color: rgb(176,196,222,.4);
-    width: 400px;
+#container-right {
+    width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    /* align-items: center; */
+    flex-direction: column;
+    /* background-color: aliceblue; */
+    gap: 2.5rem;
+}
+
+.container-contacts {
+    background: linear-gradient(90deg, rgba(10, 26, 92, .5)
+    /*#0a1a5c*/, 43.5644%, rgba(31, 39, 79, .5) 
+    /*#1f274f*/ 87.1287%, 93.5644%, rgba(40, 47, 85, .5)
+    /*#282f55*/);
+    width: 25rem;
+    display: flex;
+    justify-content: center;
     border-radius: 10px;
-    margin: 0 auto 20px;
+    /* margin: 0 auto ; */
     padding: 5px 15px;
 }
 
 .img-contacts {
-    width: 50px;
+    width: 60px;
     margin-right: 20px;
 }
 
@@ -87,7 +126,7 @@ h1 {
     align-items: center;
     cursor: pointer;
     text-decoration: none;
-    color: black;
+    color: #fff;
 }
 
 .paragrafo-zapLinkedin {
@@ -95,91 +134,406 @@ h1 {
     justify-content: space-between;
 }
 
-@media screen and (min-width: 1455px) {  /* monitor acima de 24" Polegadas */
+#textCopy {
+    width: 100%;
+    position: absolute;
+    bottom: 3px;
+    white-space: nowrap;
+    background: linear-gradient(90deg, rgba(10, 26, 92, 1)
+    /*#0a1a5c*/, 43.5644%, rgba(31, 39, 79, 1) 
+    /*#1f274f*/ 87.1287%, 93.5644%, rgba(40, 47, 85, 1)
+    /*#282f55*/);
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+}
+
+
+@media screen and (max-width: 1455px) {
+    
+    #container-left {
+        gap: 1rem;
+    }
+    
+    .container-foto-perfil {   
+        padding: 2.5rem;
+    }
+
     .foto-perfil {
-        width: 400px;
-        margin-bottom: 25px;
+        width: 20rem;
     }
-
+    
     .container-specification {
-        width: 800px;
+        width: 40rem;
     }
-
+    
     h1 {
-        font-size: 45px;
+        font-size: 40px;
     }
 
     .paragrafo-cargos {
-        font-size: 25px;
+        font-size: 22px;
+        margin-bottom: 12px;
     }
 
-    .paragrafo-endereço {
-        font-size: 18px;
-    }
-
-    .container-contacts{
-        margin: 0 auto 30px;
-        padding: 10px 20px;
-        width: 450px;
-    }
-
-    .img-contacts {
-        width: 65px;
-    }
-
-    .paragrafo-phoneEmail {
-        height: 30px;
-        margin-bottom: 10px;
-    }
-
-    .palavra-emBold {
-        font-size: 23px;
-    }
-}
-
-@media screen and (max-width: 720px) {  /* iphone 12 Pro */
-    main {
-        Background-size: 120vh;
-        background-repeat: no-repeat;
-        background-image: url(./assets/background-aviao-cortada.jpg);
-        min-height: 100%;
-    }
-
-    .container-background {
-        min-height: 100vh;
+    a {
+        font-size: 12px;
     }
     
-    .foto-perfil {
-        border-radius: 500px;
-        width: 200px;
-        margin-top: 50px;
-        margin-bottom: 15px;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .container-background {
+        flex-direction: column;
+        gap: 2rem;
     }
     
     .container-specification {
-        width: 370px;
-        margin-bottom: 25px;
+        width: 45rem;
+        padding: 5px 5px 10px;
     }
     
     h1 {
-        font-size: 27px;
+        font-size: 45px;
+    }
+    
+    .paragrafo-cargos {
+        font-size: 25px;
+    }
+    
+    .paragrafo-endereço {
+        font-weight: 100;
+        color: #fff;
+    }
+    
+    #container-right {
+        gap: 2.5rem;
+    }
+
+    a {
+        font-size: 13px;
+    }   
+}
+
+@media screen and (max-width: 799px) {
+    .container-background {
+        gap: 3rem;
+    }
+    
+    #container-left {
+        gap: 1rem;
+    }
+    
+    .container-foto-perfil {
+        padding: 4rem 0 2.5rem;
+    }
+    
+    /* .foto-perfil {
+        width: 25rem;
+    } */
+    
+    h1 {
+        font-size: 43px;
+    }
+    
+    .paragrafo-cargos {
+        font-size: 23px;
+        margin-bottom: 15px;
+    }
+    
+    /* .paragrafo-endereço {
+        font-weight: 100;
+        color: #fff;
+    } */
+    
+    #container-right {
+        /* display: grid; */
+        flex-direction: row;
+        gap: 3rem;
+    }
+    
+    .container-contacts {
+        width: auto;
+        padding: 5px 15px;
+    }
+    
+    .img-contacts {
+        width: 65px;
+        margin-right: 0px;
+    }
+    
+    .paragrafo-phoneEmail {
+        display: none;
+    }
+    
+    .palavra-emBold {
+        display: none;
+    }
+    
+    /* .link-zapLinkedin {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        cursor: pointer;
+        text-decoration: none;
+        color: #fff;
+    } */
+    
+    .paragrafo-zapLinkedin {
+        display: none;
+    }
+    
+    
+}
+
+@media screen and (max-width: 430px) {
+    .container-background {
+        gap: 1.5rem;
+    }
+    
+    #container-left {
+        gap: .5rem;
+    }
+
+    .foto-perfil {
+        width: 15rem;
+        border-radius: 50px;
+    }
+    
+    .container-foto-perfil {
+        padding: 2rem 0 1.5rem;
+    }
+    
+    /* .foto-perfil {
+        width: 25rem;
+    } */
+    .container-specification {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 33px;
     }
     
     .paragrafo-cargos {
         font-size: 17px;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
     }
     
-    .paragrafo-endereço {
-        font-size: 15px;
+    /* .paragrafo-endereço {
+        font-weight: 100;
+        color: #fff;
+    } */
+    
+    #container-right {
+        gap: 1.5rem;
     }
     
-    .container-contacts{
-        width: 340px;
-        margin-bottom: 15px;
+    .container-contacts {
+        width: auto;
+        padding: 5px 15px;
+    }
+    
+    .img-contacts {
+        width: 50px;
+        margin-right: 0px;
+    }
+    
+    .paragrafo-phoneEmail {
+        display: none;
     }
     
     .palavra-emBold {
-        font-size: 18px;
+        display: none;
     }
+    
+    /* .link-zapLinkedin {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        cursor: pointer;
+        text-decoration: none;
+        color: #fff;
+    } */
+    
+    .paragrafo-zapLinkedin {
+        display: none;
+    }
+    
+    
+}
+
+@media screen and (max-width: 390px) {
+    /* main {
+        background-size: cover;
+        min-width: 100vw;
+        
+    }
+    
+    .container-background {
+        min-width: 100vw;
+        display: flex;
+        padding: 0 1rem;
+    } */
+
+    .container-background {
+        gap: 1rem;
+    }
+    
+    #container-left {
+        gap: .5rem;
+    }
+
+    .foto-perfil {
+        width: 15rem;
+        border-radius: 50px;
+    }
+    
+    .container-foto-perfil {
+        padding: 1.75rem 0 1rem;
+    }
+    
+    /* .foto-perfil {
+        width: 25rem;
+    } */
+    .container-specification {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 31px;
+    }
+    
+    .paragrafo-cargos {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+    
+    /* .paragrafo-endereço {
+        font-weight: 100;
+        color: #fff;
+    } */
+    
+    #container-right {
+        gap: .8rem;
+        /* margin-bottom: 100vw; */
+    }
+    
+    .container-contacts {
+        width: auto;
+        padding: 5px 15px;
+    }
+    
+    .img-contacts {
+        width: 45px;
+        margin-right: 0px;
+    }
+    
+    .paragrafo-phoneEmail {
+        display: none;
+    }
+    
+    .palavra-emBold {
+        display: none;
+    }
+    
+    /* .link-zapLinkedin {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        cursor: pointer;
+        text-decoration: none;
+        color: #fff;
+    } */
+    
+    .paragrafo-zapLinkedin {
+        display: none;
+    }
+    
+    
+}
+
+@media screen and (max-width: 330px) {
+    .container-background {
+        gap: 1rem;
+    }
+    
+    #container-left {
+        gap: .5rem;
+    }
+
+    .foto-perfil {
+        width: 10rem;
+        border-radius: 30px;
+    }
+    
+    .container-foto-perfil {
+        padding: 1.5rem 0 .7rem;
+    }
+    
+    /* .foto-perfil {
+        width: 25rem;
+    } */
+    /* .container-specification {
+        width: 100%;
+    } */
+
+    h1 {
+        font-size: 25px;
+    }
+    
+    .paragrafo-cargos {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+    
+    .paragrafo-endereço {
+        /* font-weight: 100;
+        color: #fff; */
+        font-size: 13.5px;
+    }
+    
+    #container-right {
+        gap: .8rem;
+        /* margin-bottom: 100vw; */
+    }
+    
+    .container-contacts {
+        width: auto;
+        padding: 5px 15px;
+    }
+    
+    .img-contacts {
+        width: 35px;
+        margin-right: 0px;
+    }
+    
+    .paragrafo-phoneEmail {
+        display: none;
+    }
+    
+    .palavra-emBold {
+        display: none;
+    }
+    
+    /* .link-zapLinkedin {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        cursor: pointer;
+        text-decoration: none;
+        color: #fff;
+    } */
+    
+    .paragrafo-zapLinkedin {
+        display: none;
+    }
+    
+    
 }
