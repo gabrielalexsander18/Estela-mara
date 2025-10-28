@@ -378,7 +378,7 @@ a {
     
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 395px) {
     /* main {
         background-size: cover;
         min-width: 100vw;
@@ -400,7 +400,7 @@ a {
     }
 
     .foto-perfil {
-        width: 15rem;
+        width: 13.5rem;
         border-radius: 50px;
     }
     
